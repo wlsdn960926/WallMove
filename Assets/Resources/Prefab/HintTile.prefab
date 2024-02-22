@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -1234540003902825695}
   - component: {fileID: -3606034338153873533}
   m_Layer: 0
-  m_Name: SpikesAfterTimeTile
-  m_TagString: SpikesAfterTime
+  m_Name: HintTile
+  m_TagString: HintTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -40,9 +40,9 @@ public class PlayerCollisionManager : MonoBehaviour
             }
         }
 
-        if(info.collider.tag == "SpikesAfterTime")
+        if(info.collider.tag == "HintTile")
         {
-            info.collider.GetComponent<SpikesAfterTime>().startCountDown();
+            Destroy(info.collider.gameObject);
         }
 
     }

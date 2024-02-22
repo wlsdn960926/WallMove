@@ -9,13 +9,11 @@ public class SpikesAfterTime : MonoBehaviour
     List<Direction> dirOfTouch = new List<Direction>();
     [SerializeField] LayerMask obstacleMask;
 
-    // 태그 "SpikesAfterTime"을 가진 오브젝트에 충돌했을 때 호출되는 메서드
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 충돌한 오브젝트가 플레이어인지 확인하고, 플레이어와 부딪쳤을 때만 startCountDown() 메서드를 호출합니다.
-        if (other.CompareTag("Player") && other.gameObject.CompareTag("SpikesAfterTime"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("플레이어가 SpikesAfterTime 태그를 가진 장애물과 충돌했습니다.");
+            Debug.Log("플레이어가 SpikesAfterTime과 충돌.");
             startCountDown();
         }
     }
@@ -24,16 +22,14 @@ public class SpikesAfterTime : MonoBehaviour
     {
         foreach (Direction dir in dirOfTouch)
         {
-            // 지정된 방향에서 "SpikesAfterTime" 태그를 가진 장애물을 확인하고 파괴합니다.
             RaycastHit2D hit = Physics2D.Raycast(transform.position, GetDirectionVector(dir), 0.6f, obstacleMask);
             if (hit && hit.collider.CompareTag("SpikesAfterTime"))
             {
-                Debug.Log("SpikesAfterTime 태그를 가진 장애물을 파괴합니다.");
+                Debug.Log("SpikesAfterTime을 파괴.");
                 Destroy(hit.collider.gameObject);
             }
         }
     }
-
 
     private Vector2 GetDirectionVector(Direction dir)
     {

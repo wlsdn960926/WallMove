@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Undefined
   - Spikes
-  - SpikesAfterTime
+  - HintTile
   layers:
   - Default
   - TransparentFX
