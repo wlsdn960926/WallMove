@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(movingHorizontally)
         {
-            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1, obstacleMask))
+            if (Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1, obstacleMask) || Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 1, obstacleMask))
             {
                 canCheck = true;
             }

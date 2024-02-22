@@ -7,6 +7,8 @@ public class PlayerCollisionManager : MonoBehaviour
     PlayerMovement player;
     RaycastHit2D hit;
     [SerializeField] LayerMask obstacleMask;
+    [SerializeField] float timeAfterSpikesKill;
+    public GameObject clearPanel;
 
     void Start()
     {
@@ -34,8 +36,14 @@ public class PlayerCollisionManager : MonoBehaviour
             }
             if(hit != null)
             {
-                Destroy(GameObject.Find("Player"));
+                clearPanel.SetActive(true);
             }
         }
+
+        if(info.collider.tag == "SpikesAfterTime")
+        {
+            info.collider.GetComponent<SpikesAfterTime>().startCountDown();
+        }
+
     }
 }
