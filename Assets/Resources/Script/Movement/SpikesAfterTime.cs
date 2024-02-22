@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikesAfterTime : MonoBehaviour
+public class HintTile : MonoBehaviour
 {
     [SerializeField] float countDown;
     List<Direction> dirOfTouch = new List<Direction>();
@@ -13,7 +13,7 @@ public class SpikesAfterTime : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("플레이어가 SpikesAfterTime과 충돌.");
+            Debug.Log("플레이어가 HintTile과 충돌.");
             startCountDown();
         }
     }
@@ -23,9 +23,9 @@ public class SpikesAfterTime : MonoBehaviour
         foreach (Direction dir in dirOfTouch)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, GetDirectionVector(dir), 0.6f, obstacleMask);
-            if (hit && hit.collider.CompareTag("SpikesAfterTime"))
+            if (hit && hit.collider.CompareTag("HintTile"))
             {
-                Debug.Log("SpikesAfterTime을 파괴.");
+                Debug.Log("HintTile을 파괴.");
                 Destroy(hit.collider.gameObject);
             }
         }

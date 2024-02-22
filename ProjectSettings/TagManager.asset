@@ -53,3 +53,6 @@ TagManager:
   - name: Cloud2
     uniqueID: 1419218439
     locked: 0
+  - name: Player
+    uniqueID: 361266301
+    locked: 0
