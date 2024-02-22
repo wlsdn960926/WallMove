@@ -16,6 +16,7 @@
 #### 시작화면
 - Touch To Start 버튼 (게임 시작)
 - Parallax 배경
+
 ![poster](./WallMove.PNG)
 
 #### 게임 화면
@@ -24,6 +25,7 @@
 - 출구로 쉽게 향하도록하는 힌트 블록 (GREEN)
 - 닿으면 클리어하는 출구 블록 (RED)
 - 출구 블록과 플레이어가 충돌하면 클리어 판넬 출력
+
 ![poster](./Stage1.PNG)
 
 #### Clear 화면 
