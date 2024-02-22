@@ -17,7 +17,7 @@
 - Touch To Start 버튼 (게임 시작)
 - Parallax 배경
 
-![poster](./WallMove.PNG)
+![WallMove](https://github.com/wlsdn960926/WallMove/assets/57439086/81f02c65-3115-4606-84cd-ba6e252c6453)
 
 #### 게임 화면
 - 상하좌우로 움직이는 Player
